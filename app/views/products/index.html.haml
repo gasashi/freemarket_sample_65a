@@ -1,0 +1,188 @@
+.top
+  .top__header
+    .top__header__inner
+      %h1.top__header__inner__title
+        = image_tag "logo/logo.png", width: "140px"
+      %input.top__header__inner__searchBox{:name => "search",   :placeholder => "キーワードから探す"}
+      %button.top__header__inner__button
+        = image_tag "icon/icon-search 1.png", width: "18px"
+    %ul.top__header__menu
+      %ul.top__header__menu__left
+        %li.top__header__menu__left__list
+          カテゴリー
+        %li.top__header__menu__left__list
+          ブランド
+      %ul.top__header__menu__right
+        %li.top__header__menu__right__list
+          ログイン
+        %li.top__header__menu__right__list
+          新規会員登録
+
+
+  .top__main
+    .top__main__content
+      .top__main__content__subtitle
+        人生を変えるフリマアプリ
+      .top__main__content__text
+        FURIMAは誰でもかんたんに出品・購入できる<br>
+        フリマアプリです
+      %ul.top__main__content__list
+        %li.top__main__content__list__button
+          = image_tag "logo/app-store.svg", width: "180px", alt: "app-store"
+        %li.top__main__content__list__button
+          = image_tag "logo/google-play.png", width: "180px", alt: "google-play"
+
+
+  .top__nav
+    .top__nav__title
+      FURIMAが選ばれる3つの理由
+    %ul.top__nav__content
+      %li.top__nav__content__list
+        .top__nav__content__list__pic
+          = image_tag "pict/pict-reason-01.jpg", width: "306px"
+        .top__nav__content__list__subtitle
+          3分ですぐに出品
+        .top__nav__content__list__text
+          スマホで入力するだけで簡単に出品できる！
+      %li.top__nav__content__list
+        .top__nav__content__list__pic
+          = image_tag "pict/pict-reason-02.jpg", width: "306px"
+        .top__nav__content__list__subtitle
+          シンプルで使いやすい
+        .top__nav__content__list__text
+          めんどくさい入力は必要なく、検索も購入もスムーズ！
+      %li.top__nav__content__list
+        .top__nav__content__list__pic
+          = image_tag "pict/pict-reason-03.jpg", width: "306px"
+        .top__nav__content__list__subtitle
+          手数料業界最安
+        .top__nav__content__list__text
+          最大3%でお得に出品&購入！
+
+
+  .top__apImage
+    .top__apImage__inner
+      .top__apImage__inner__subtitle
+        会員数日本一位
+      .top__apImage__inner__text
+        FURIMAは、フリマアプリで最も人気。<br>
+        出品・購入回数も業界最多です！<br>
+        ほしかったあの商品に出会えるかもしれません。
+      %ul.top__apImage__inner__list
+        %li.top__apImage__inner__button__button
+          = image_tag "logo/app-store.svg", width: "180px", alt: "app-store"
+        %li.top__apImage__inner__button__button
+          = image_tag "logo/google-play.png", width: "180px", alt: "google-play"
+
+
+  .top__service
+    .top__service__title
+      FURIMAの特徴
+    %ul.top__service__content
+      %li.top__service__content__list
+        .top__service__content__list__pic
+          = image_tag "icon/icon-01.png", width: "219px"
+        .top__service__content__list__subtitle
+          簡単に売り買いできる
+        .top__service__content__list__text
+          スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+      %li.top__service__content__list
+        .top__service__content__list__pic
+          = image_tag "icon/icon-03.png", width: "219px"
+        .top__service__content__list__subtitle
+          売上金は即日振込みに対応
+        .top__service__content__list__text
+          午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします!
+      %li.top__service__content__list
+        .top__service__content__list__pic
+          = image_tag "icon/icon-04.png", width: "219px"
+        .top__service__content__list__subtitle
+          様々な支払いに対応
+        .top__service__content__list__text
+          お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+
+
+  .top__product
+    .top__product__category
+      .top__product__category__title
+        ピックアップカテゴリー
+      .top__product__category__link
+        新規投稿商品
+      %ul.top__product__category__list
+        %li.top__product__category__list__pic
+          = image_tag "pict/a007.png"
+        %li.top__product__category__list__pic
+          = image_tag "pict/a004.png"
+        %li.top__product__category__list__pic
+          = image_tag "pict/a001.png"
+
+    .top__product__brand
+      .top__product__brand__title
+        ピックアップブランド
+      .top__product__brand__link
+        アーカイバ
+      %ul.top__product__brand__list
+        %li.top__product__brand__list__pic
+          = image_tag "pict/a007.png"
+        %li.top__product__brand__list__pic
+          = image_tag "pict/a004.png"
+        %li.top__product__brand__list__pic
+          = image_tag "pict/a001.png"
+
+
+  .top__apBanner
+    .top__apBanner__inner
+      .top__apBanner__inner__title
+        だれでもかんたん、人生を変えるフリマアプリ
+      .top__apBanner__inner__text
+        今すぐ無料ダウンロード！
+      .top__apBanner__inner__icon
+        .top__apBanner__inner__icon__button
+          = image_tag "logo/app-store.svg", width: "180px", alt: "app-store"
+        .top__apBanner__inner__icon__button
+          = image_tag "logo/google-play.png", width: "180px", alt: "google-play"
+
+
+  .top__footer
+    %ul.top__footer__contents
+      %li.top__footer__contents__content
+        .top__footer__contents__content__head
+          FURIMAについて
+        %ul.top__footer__contents__content__lists
+          %li.top__footer__contents__content__lists__list
+            = link_to "会社概要（運営会社）", "#"
+          %li.top__footer__contents__content__lists__list
+            = link_to "プライバシーポリシー", "#"
+          %li.top__footer__contents__content__lists__list
+            = link_to "FURIMA利用規約", "#"
+          %li.top__footer__contents__content__lists__list
+            = link_to "ポイントに関する特約", "#"
+      %li.top__footer__contents__content
+        .top__footer__contents__content__head
+          FURIMAを見る
+        %ul.top__footer__contents__content__lists
+          %li.top__footer__contents__content__lists__list
+            = link_to "カテゴリー一覧", "#"
+          %li.top__footer__contents__content__lists__list
+            = link_to "ブランド一覧", "#"
+      %li.top__footer__contents__content
+        .top__footer__contents__content__head
+          ヘルプ＆ガイド
+        %ul.top__footer__contents__content__lists
+          %li.top__footer__contents__content__lists__list
+            = link_to "FURIMAガイド", "#"
+          %li.top__footer__contents__content__lists__list
+            = link_to "FURIMAロゴ利用ガイドライン", "#"
+          %li.top__footer__contents__content__lists__list
+            = link_to "お知らせ", "#"
+
+    .top__footer__logo
+      = link_to image_tag("logo/logo-white.png", width: "160px"), "#"
+    %p.top__footer__copyright
+      ©️ FURIMA
+
+
+  .top__exhibit
+    出品する
+    .top__exhibit__pic
+      = image_tag "icon/icon_camera.png", width: "54px"
