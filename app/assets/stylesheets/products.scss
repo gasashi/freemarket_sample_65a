@@ -132,6 +132,19 @@ ul {
         &__pic {
           width: 306px;
           height: 306px;
+          position: relative;
+          span {
+            border-radius: 4%;
+            font-size: 30px;
+            text-align: center;
+            margin: 0 5px 0 0;
+            padding: 10px 20px;
+            background-color: #3CCACE;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
         }
         &__subtitle {
           font-weight: bold;
