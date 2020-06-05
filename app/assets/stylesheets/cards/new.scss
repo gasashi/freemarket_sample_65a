@@ -1,0 +1,134 @@
+.card-wrapper {
+  background-color: $color-background;
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  .content {
+    background-color: $color-form;
+    width: 700px;
+    margin: 0 auto;
+    .card-info {
+      font-size: 24px;
+      padding: 8px 24px;
+      border-bottom: 1px solid $color-background;
+      text-align: center;
+    }
+    .form {
+      padding: 40px 40px 64px;
+      .number-content {
+        .number {
+          width: 100%;
+          margin: 8px 0 0;
+          height: 48px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid $color-form-border;
+          background: $color-form;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+        .card-list {
+          .card-icon {
+            margin: 8px 8px 0 0;
+            font-size: 0;
+            display: inline-block;
+          }
+        }
+      }
+
+      .expiration-content {
+        margin-top: 32px;
+        .expiration-box {
+          display: flex;
+          flex-direction: row;
+          margin: 8px 0 0;
+          &__month {
+            display: inline-block;
+            width: 50%;
+            .exp_month {
+              height: 48px;
+              width: 75%;
+              padding: 0 16px;
+              border-radius: 4px;
+              border: 1px solid $color-form-border;
+              font-size: 16px;
+              cursor: pointer;
+            }
+          }
+          &__year {
+            display: inline-block;
+            width: 50%;
+            .exp_year {
+              height: 48px;
+              width: 75%;
+              padding: 0 16px;
+              border-radius: 4px;
+              border: 1px solid $color-form-border;
+              font-size: 16px;
+              cursor: pointer;
+            }
+          }
+          span {
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .security-code-content {
+        margin-top: 32px;
+        .cvc {
+          width: 100%;
+          margin: 8px 0 0;
+          height: 48px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid $color-form-border;
+          background: $color-form;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+      }
+      .button {
+        margin-top: 32px;
+        background: $color-required;
+        border: 1px solid $color-required;
+        color: $color-form;
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+        border-radius: 4px;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      &__input {
+        max-width: 343px;
+        margin: 0 auto;
+        .input-name{
+          align-items: center;
+          display: flex;
+          width: 100%;
+          label {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.4em;
+            white-space: nowrap;
+          }
+          span {
+            margin-left: 8px;
+            font-size: 12px;
+            padding: 0 4px;
+            background-color: $color-required;
+            color: $color-form;
+            border-radius: 2px;
+            display: inline-block;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.4em;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

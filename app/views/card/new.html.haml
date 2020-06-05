@@ -1,39 +1,73 @@
-= form_tag(pay_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
-  %label カード番号
-  = text_field_tag "number", "", class: "number", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
-  %br
-  %label 有効期限
-  %select#exp_month{name: "exp_month", type: "text"}
-    %option{value: ""} --
-    %option{value: "1"}01
-    %option{value: "2"}02
-    %option{value: "3"}03
-    %option{value: "4"}04
-    %option{value: "5"}05
-    %option{value: "6"}06
-    %option{value: "7"}07
-    %option{value: "8"}08
-    %option{value: "9"}09
-    %option{value: "10"}10
-    %option{value: "11"}11
-    %option{value: "12"}12
-  %span 月/
-  %select#exp_year{name: "exp_year", type: "text"}
-    %option{value: ""} --
-    %option{value: "2019"}19
-    %option{value: "2020"}20
-    %option{value: "2021"}21
-    %option{value: "2022"}22
-    %option{value: "2023"}23
-    %option{value: "2024"}24
-    %option{value: "2025"}25
-    %option{value: "2026"}26
-    %option{value: "2027"}27
-    %option{value: "2028"}28
-    %option{value: "2029"}29
-  %span 年
-  %br
-  %label セキュリティコード
-  = text_field_tag "cvc", "", class: "cvc", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
-  #card_token
-  = submit_tag "追加する", id: "token_submit"
+.sell-header
+  =render 'products/login-header'
+.card-wrapper
+  .content
+    .card-info
+      クレジットカード情報入力
+    .form
+      .form__input
+        = form_tag(pay_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
+
+          .number-content
+            .input-name
+              %label
+                カード番号
+              %span
+                必須
+            = text_field_tag "number", "", class: "number", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
+            .card-list
+              = image_tag asset_path('icon/icon_visa.png'), alt: "card", class: "card-icon", width:"49", height:"20"
+              = image_tag asset_path('icon/icon_mastercard.png'), alt: "card", class: "card-icon", width:"34", height:"20"
+              = image_tag asset_path('icon/icon_jcb.png'), alt: "card", class: "card-icon", width:"32", height:"20"
+              = image_tag asset_path('icon/icon_americanexpress.png'), alt: "card", class: "card-icon", width:"21", height:"20"
+              = image_tag asset_path('icon/icon_dinersclub.png'), alt: "card", class: "card-icon", width:"32", height:"20"
+              = image_tag asset_path('icon/icon_discover.png'), alt: "card", class: "card-icon", width:"32", height:"20"
+
+          .expiration-content
+            .input-name
+              %label
+                有効期限
+              %span
+                必須
+            .expiration-box
+              .expiration-box__month
+                %select#exp_month{name: "exp_month", type: "text", class: "exp_month"}
+                  %option{value: "1"}01
+                  %option{value: "2"}02
+                  %option{value: "3"}03
+                  %option{value: "4"}04
+                  %option{value: "5"}05
+                  %option{value: "6"}06
+                  %option{value: "7"}07
+                  %option{value: "8"}08
+                  %option{value: "9"}09
+                  %option{value: "10"}10
+                  %option{value: "11"}11
+                  %option{value: "12"}12
+                %span 月
+              .expiration-box__year
+                %select#exp_year{name: "exp_year", type: "text", class: "exp_year"}
+                  %option{value: "2020"}20
+                  %option{value: "2021"}21
+                  %option{value: "2022"}22
+                  %option{value: "2023"}23
+                  %option{value: "2024"}24
+                  %option{value: "2025"}25
+                  %option{value: "2026"}26
+                  %option{value: "2027"}27
+                  %option{value: "2028"}28
+                  %option{value: "2029"}29
+                  %option{value: "2030"}30
+                %span 年
+
+          .security-code-content
+            .input-name
+              %label
+                セキュリティコード
+              %span
+                必須
+            = text_field_tag "cvc", "", class: "cvc", placeholder: "カード背面4桁もしくは3桁の番号", maxlength: "4", id: "cvc"
+          #card_token
+          = submit_tag "追加する", id: "token_submit", class: "button"
+.sell-footer
+  =render 'products/login-footer'
