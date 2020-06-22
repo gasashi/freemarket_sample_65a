@@ -71,12 +71,24 @@ $(function(){
         $('.js-file_label').show();
       }
     })
-});
 
-$(function(){
   // 商品説明の文字数カウント
   $('#js-count').keyup(function(){
     var count = $(this).val().length;
     $('.show-count').text(count);
   });
+  
+  $('#sell_price').on('input', function(){ 
+    let data = Number($('#sell_price').val()); 
+    let profit = Math.round(data * 0.9)  
+    let fee = (data - profit) 
+    $('.price-box__second__second-right').html("¥ " + fee) 
+		$('.price-box__third__third-right').html("¥ " + profit)
+		$('#price').val(data)
+    if(data < 300) { 
+    $('.price-box__second__second-right').html('');
+    $('.price-box__third__third-right').html('');
+    }
+  })
+
 });
