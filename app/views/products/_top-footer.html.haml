@@ -48,9 +48,16 @@
     = link_to image_tag("logo/logo-white.png", width: "160px"), "#"
   %p.top-footer__copyright
     ©️ FURIMA
-
-  .top-footer__exhibit
-    出品する
-    .top-footer__exhibit__pic
-      = link_to image_tag("icon/icon_camera.png", width: "54px"), "/products/new"
+  - if user_signed_in?
+    = link_to new_product_path, class: 'btn' do
+      .top-footer__exhibit
+        出品する 
+        .top-footer__exhibit__pic
+          = image_tag "icon/icon_camera.png", width: "54px"
+  -else
+    = link_to new_user_session_path, class: 'btn' do
+      .top-footer__exhibit
+        出品する 
+        .top-footer__exhibit__pic
+          = image_tag "icon/icon_camera.png", width: "54px"
 
