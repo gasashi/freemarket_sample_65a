@@ -1,5 +1,6 @@
 class CardsController < ApplicationController
-
+  before_action :authenticate_user!, :only => [:new, :show]
+  
   require "payjp"
 
   def new
