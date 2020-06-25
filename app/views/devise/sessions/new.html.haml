@@ -1,30 +1,29 @@
 .main-signin
   .header 
     = render 'products/login-header'
-  .main
-    .main__login
-      .main__login__account
-        %p
-          アカウントをお持ちでない方はこちら
-        =link_to "/signup/first" do
-          新規会員登録
-      .main__login__inner
-        = link_to "https://www.facebook.com/", class: "main__login__inner__btn main__login__inner__btn--facebook" do
-          = fa_icon 'facebook-square',class:'icon'
-          Facebookでログイン
-        = link_to "https://www.google.com/", class: "main__login__inner__btn main__login__inner__btn--google" do
-          = fa_icon 'google',class:'icon'
-          Googleでログイン
-      .main__login__bottom
-        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-          = f.email_field :email, placeholder:'メールアドレス',class: 'main__login__bottom__form'
-          = f.password_field :password, placeholder:'パスワード',class: 'main__login__bottom__form'
-          .main__login__bottom__robot
-            Googleのロボット
-          .main__login__bottom__login
-            = f.submit "ログイン", class: "main__login__bottom__login" 
-        .main__login__bottom__passwordforgot
-          = link_to "#", class: "main__login__bottom__passwordforgot" do
-            パスワードお忘れの方
+  .main-signin__login
+    .main-signin__login__account
+      %p
+        アカウントをお持ちでない方はこちら
+      =link_to "/signup/first" do
+        新規会員登録
+    .main-signin__login__inner
+      = link_to "https://www.google.com/", class: "main-signin__login__inner__btn main-signin__login__inner__btn--google" do
+        = fa_icon 'google',class:'icon'
+        Googleでログイン
+      = link_to "https://www.facebook.com/", class: "main-signin__login__inner__btn main-signin__login__inner__btn--facebook" do
+        = fa_icon 'facebook-square',class:'icon'
+        Facebookでログイン
+    .main-signin__login__bottom
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        = f.email_field :email, placeholder:'メールアドレス',class: 'main-signin__login__bottom__form'
+        = f.password_field :password, placeholder:'パスワード',class: 'main-signin__login__bottom__form'
+        .main-signin__login__bottom__robot
+          Googleのロボット
+        .main-signin__login__bottom__login
+          = f.submit "ログイン", class: "main-signin__login__bottom__login" 
+      .main-signin__login__bottom__passwordforgot
+        = link_to "#", class: "main-signin__login__bottom__passwordforgot" do
+          パスワードお忘れの方
   .footer
     = render 'products/login-footer'

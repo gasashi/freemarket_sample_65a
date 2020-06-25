@@ -1,18 +1,19 @@
+.signup-header
+  = render 'products/login-header'
 .main-signup
-  .header
-    = render 'products/login-header'
-  .main
-    .main__header 新規会員登録
-    .main__content
-      .main__content__line
-        = link_to "/signup/second", class: "main__content__line__btn main__content__line__btn--mail" do
-          = fa_icon 'envelope', class: "main__content__line__btn--mail"
-          メールアドレスで登録する
-        = link_to "https://www.facebook.com/", class: "main__content__line__btn main__content__line__btn--facebook" do
-          = fa_icon 'facebook-square', class: "main__content__line__btn--facebook"
-          Facebookで登録する
-        = link_to "https://www.google.com/", class: "main__content__line__btn main__content__line__btn--google" do
-          = fa_icon 'google', class: "main__content__line__btn--icon"
-          Googleで登録する
-  .footer
-    = render 'products/login-footer'
+  .new-member-header 新規会員登録
+  .main-signup__content
+    .main-signup__content__line
+      = link_to "/signup/second", class: "main-signup__content__line__btn main-signup__content__line__btn--mail" do
+        = fa_icon 'envelope', class: "icon"
+        メールアドレスで登録する
+      = link_to "https://www.google.com/", class: "main-signup__content__line__btn main-signup__content__line__btn--google" do
+        = fa_icon 'google', class: "icon"
+        Googleで登録する
+      = link_to "https://www.facebook.com/", class: "main-signup__content__line__btn main-signup__content__line__btn--facebook" do
+        = fa_icon 'facebook-square', class: "icon"
+        Facebookで登録する
+    .main-signup__content__terms
+      登録することで、利用規約とプライバシーポリシーに同意したものとみなされます。
+.signup-footer
+  = render 'products/login-footer'
