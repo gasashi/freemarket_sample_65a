@@ -1,67 +1,81 @@
+.body-register2-header
+  = render 'signup/progress/header3'
+
 .body-register2
-  .header
-    = render 'signup/progress/header3'
-  .main
-    = form_for @user, url: signup_index_path, html: {class: 'main__container'} do |f|
-      = render 'error_message3', model: f.object
-      .main__container__header
-        発送元・お届け先住所入力
-      = f.fields_for :address, html: {class: 'main__container__form'} do |i|
-        .main__container__form__kanji
-          .main__container__form__kanji__title
-            お名前 
-          .main__container__form__kanji__hissu
+  .address-header
+    発送元・お届け先住所入力
+  = form_for @user, url: signup_index_path, html: {class: 'body-register2-form'} do |f|
+    = render 'error_message3', model: f.object
+    = f.fields_for :address, html: {class: 'address-form'} do |i|
+
+      .kanji-name-content
+        .address-input-name
+          %label
+            お名前
+          %span
             必須
-          .main__container__form__kanji__require
-            = i.text_field :last_name, placeholder:"例)田中", class: "main__container__form__kanji__require__family-name"
-            = i.text_field :first_name, placeholder:"例)太郎", class: "main__container__form__kanji__require__first-name"
-        .main__container__form__kana
-          .main__container__form__kana__title
+        .kanji-name-content__box
+          = i.text_field :last_name, placeholder:"例)田中", class: "kanji-name-content__box__family-name"
+          = i.text_field :first_name, placeholder:"例)太郎", class: "kanji-name-content__box__first-name"
+
+      .kana-name-content
+        .address-input-name
+          %label
             お名前カナ
-          .main__container__form__kana__hissu
+          %span
             必須
-          .main__container__form__kana__require
-            = i.text_field :last_name_kana, placeholder:"例)タナカ", class: "main__container__form__kana__require__family-name"
-            = i.text_field :first_name_kana, placeholder:"例)タロウ", class: "main__container__form__kana__require__first-name"
-        .main__container__form__post
-          .main__container__form__post__title
+        .kana-name-content__box
+          = i.text_field :last_name_kana, placeholder:"例)タナカ", class: "kana-name-content__box__family-name"
+          = i.text_field :first_name_kana, placeholder:"例)タロウ", class: "kana-name-content__box__first-name"
+    
+      .post-number-content
+        .address-input-name
+          %label
             郵便番号
-          .main__container__form__post__require
+          %span
             必須
-          = i.text_field :post_number, placeholder:"例)123-4567", class: "main__container__form__post__number"
-        .main__container__form__pref
-          .main__container__form__pref__title
+        = i.text_field :post_number, placeholder:"例)123-4567", class: "post-number-content__box"
+
+      .prefecture-content
+        .address-input-name
+          %label
             都道府県
-          .main__container__form__pref__hissu
+          %span
             必須
-          .main__container__form__pref__require
-            = i.collection_select :prefecture_id, Prefecture.all, :id, :name
-          .main__container__form__city
-            .main__container__form__city__title
-              市区町村
-            .main__container__form__city__require
+        = i.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "選択してください"
+        
+        .city-content
+          .address-input-name
+            %label
+              市町村
+            %span
               必須
-            = i.text_field :city, placeholder:"例)熊本市", class: "main__container__form__city__detail"
-          .main__container__form__addnumber
-            .main__container__form__addnumber__title
+          = i.text_field :city, placeholder:"例)熊本市", class: "city-content__box"
+  
+        .address-number-content
+          .address-input-name
+            %label
               番地
-            .main__container__form__addnumber__require
+            %span
               必須
-            = i.text_field :address_number, placeholder:"例)通町筋1-1-1", class: "main__container__form__addnumber__detail"
-          .main__container__form__build
-            .main__container__form__build__title
+          = i.text_field :address_number, placeholder:"例)通町筋1-1-1", class: "address-number-content__box"
+
+        .building-content
+          .address-input-name
+            %label
               建物名
-            .main__container__form__build__require
-              任意
-            = i.text_field :building, placeholder:"例)下通りビル109", class: "main__container__form__build__detail"
-          .main__container__form__phone
-            .main__container__form__phone__title
+            %span.any
+              必須
+          = i.text_field :building, placeholder:"例)下通りビル109", class: "building-content__box"
+
+        .phone-number-content
+          .address-input-name
+            %label
               電話
-            .main__container__form__phone__require
-              任意
-            = i.text_field :phone_number, placeholder:"例)05012345678", class: "main__container__form__phone__detail"
-          .main__container__form__btn
-            = f.submit "次へ進む" ,class: "main__container__form__btn__red"
-  .footer
-    = render 'products/login-footer'
-  = javascript_include_tag 'signup.js'
+            %span.any
+              必須
+          = i.text_field :phone_number, placeholder:"例)05012345678", class: "phone-number-content__box"
+        
+        = f.submit "次へ進む" ,class: "address-btn"
+.body-register2-footer
+  = render 'products/login-footer'

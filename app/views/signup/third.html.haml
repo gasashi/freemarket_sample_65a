@@ -1,24 +1,20 @@
+.body-phone1-header
+  = render 'signup/progress/header2'
 .body-phone1
-  .header
-    = render 'signup/progress/header2'
-  .main
-    .main__container
-      .main__container__header
-        電話番号の確認
-      = form_for @user, url: fifth_signup_index_path, method: :get, html: {class: 'main__container__form'} do |f|
-        = render 'error_message2', model: f.object
-        .main__container__form__input
-          .main__container__form__input__title
-            携帯電話の番号
-          = f.text_field :phone_number, placeholder:"携帯電話の番号を入力", class: "main__container__form__input__text"
-        .main__container__form__info
-          本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-        .main__container__form__btn
-          = f.submit "SMSを送信する" ,class: "main__container__form__btn__red" 
-        .main__container__form__label
-          ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
-        .main__container__form__text
-          = link_to "電話番号の確認が必要な理由", "#", class: "main__container__form__text__right"
-.footer
+  .phone-number-header
+    電話番号の確認
+  = form_for @user, url: fifth_signup_index_path, method: :get, html: {class: 'phone-number-form'} do |f|
+    .phone-number-content
+      .phone-number-content__label
+        携帯電話の番号
+      = f.text_field :phone_number, placeholder:"携帯電話の番号を入力", class: "phone-number-content__number-input"
+    .phone-number-info
+      本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+    = f.submit "SMSを送信する" ,class: "phone-number-btn" 
+    .phone-number-label
+      ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+    .phone-number-text
+      = link_to "電話番号の確認が必要な理由", "#", class: "phone-number-text__right"
+      = icon('fa', 'angle-right')
+.body-phone1-footer
   = render 'products/login-footer'
-= javascript_include_tag 'signup.js'

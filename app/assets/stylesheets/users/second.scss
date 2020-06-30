@@ -1,392 +1,215 @@
-.body-register {
-  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
-  background-color: rgb(245, 245, 245);
-  .field_with_errors {
-    display: contents;
+.signup-register {
+  width: 700px;
+  margin: 0 auto;
+  background-color: $color-form;
+  .member-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    border-bottom: 1px solid $color-background;
+    padding: 32px;
   }
-  .main {
-    background-color: rgb(245, 245, 245);
-    height: 90%;
-    &__container {
-      background-color: white;
-      height: 100%;
-      width: 50%;
-      margin: auto;
-      &__header {
-        background-color: white;
-        height: 100px;
-        font-size: 22px;
-        font-weight: bold;
-        margin: auto;
-        text-align: center;
-        line-height: 100px;
-        border-bottom: #f5f5f5 solid 1px;
-      }
-      &__form {
-        height: 100%;
+  .signup-register-form {
+    text-align: left;
+    padding: 40px 178.5px 64px;
+    .nickname-content {
+      &__box {
         width: 100%;
-        margin: auto;
-        &__content-top {
-          height: 90%;
-          width: 100%;
-          margin: auto;
-          padding-top: 30px;
-
-          &__nickname {
-            height: 100px;
-            width: 50%;
-            margin: auto;
-            &__label {
-              font-weight: 550;
-              display: inline-block;
-            }
-            &__require {
-              background: #ea352d;
-              display: inline-block;
-              margin: 0 0 0 8px;
-              padding: 2px 4px;
-              border-radius: 2px;
-              color: #fff;
-              font-size: 12px;
-              vertical-align: top;
-            }
-            &__text {
-              height: 50px;
-              width: 300px;
-              margin: 8px 0 0;
-              padding: 10px 16px 8px;
-              border-radius: 4px;
-              border: 1px solid #ccc;
-              background: #fff;
-              line-height: 1.5;
-              font-size: 16px;
-            }
-          }
-          &__mail {
-            height: 100px;
-            width: 50%;
-            margin: auto;
-            &__label {
-              font-weight: 550;
-              display: inline-block;
-            }
-            &__require {
-              background: #ea352d;
-              display: inline-block;
-              margin: 0 0 0 8px;
-              padding: 2px 4px;
-              border-radius: 2px;
-              color: #fff;
-              font-size: 12px;
-              vertical-align: top;
-            }
-            &__text {
-              height: 50px;
-              width: 300px;
-              margin: 8px 0 0;
-              padding: 10px 16px 8px;
-              border-radius: 4px;
-              border: 1px solid #ccc;
-              background: #fff;
-              line-height: 1.5;
-              font-size: 16px;
-            }
-          }
-          &__password {
-            height: 140px;
-            width: 50%;
-            margin: auto;
-            &__label {
-              font-weight: 550;
-              display: inline-block;
-            }
-            &__require {
-              background: #ea352d;
-              display: inline-block;
-              margin: 0 0 0 8px;
-              padding: 2px 4px;
-              border-radius: 2px;
-              color: #fff;
-              font-size: 12px;
-              vertical-align: top;
-            }
-            &__text {
-              height: 50px;
-              width: 300px;
-              margin: 8px 0 0;
-              padding: 10px 16px 8px;
-              border-radius: 4px;
-              border: 1px solid #ccc;
-              background: #fff;
-              line-height: 1.5;
-              font-size: 16px;
-            }
-            &__info {
-              color: #888;
-              font-size: 15px;
-              margin-top: 10px;
-            }
-          }
-          &__check {
-            margin-top: 16px;
-            &__box {
-              position: relative;
-              z-index: 2;
-              padding: 0 0 0 28px;
-              font-size: 14px;
-              font-weight: 400;
-              vertical-align: middle;
-              cursor: pointer;
-            }
-            &::before {
-              content:'';
-              width:32px;
-              height:32px;
-              display:inline-block;
-              position:absolute;
-              left:0;
-              background-color: #fff;
-              box-shadow:	inset 1px 2px 3px 0px #000;
-              border-radius:6px 6px 6px 6px;
-            }
-            &__box nput[type=checkbox] {
-                display:		none;
-              }
-            &__label {
-              z-index: 2;
-              padding: 0 0 0 28px;
-              font-size: 14px;
-              font-weight: 400;
-              vertical-align: middle;
-              cursor: pointer;
-            }
-          }
-          &__identity {
-            height: 100px;
-            width: 50%;
-            margin: auto;
-            padding-top: 40px;
-            &__head {
-              font-size: 16px;
-              font-weight: 550;
-            }
-            &__main {
-              margin: 8px 0 0;
-              font-size: 14.5px;
-            }
-          }
-          &__name-kanji {
-            height: 90px;
-            width: 50%;
-            margin: auto;
-            padding-top: 60px;
-            &__label {
-              font-weight: 550;
-              display: inline-block;
-            }
-            &__require {
-              background: #ea352d;
-              display: inline-block;
-              margin: 0 0 0 8px;
-              padding: 2px 4px;
-              border-radius: 2px;
-              color: #fff;
-              font-size: 12px;
-              vertical-align: top;
-            }
-          &__box {
-            text-align: center;
-            &__family-name {
-              height: 50px;
-              width: 140px;
-              margin: 8px 0 0;
-              padding: 10px 16px 8px;
-              border-radius: 4px;
-              border: 1px solid #ccc;
-              background: #fff;
-              line-height: 1.5;
-              font-size: 16px;
-            }
-            &__first-name {
-              height: 50px;
-              width: 140px;
-              margin: 8px 0 0;
-              padding: 10px 16px 8px;
-              border-radius: 4px;
-              border: 1px solid #ccc;
-              background: #fff;
-              line-height: 1.5;
-              font-size: 16px;
-            }
-          }
+        height: 48px;
+        margin: 8px 0 0;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid $color-form-border;
+        background: $color-form;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+    }
+    .mail-content {
+      margin: 24px 0 0;
+      &__box {
+        width: 100%;
+        height: 48px;
+        margin: 8px 0 0;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid $color-form-border;
+        background: $color-form;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+    }
+    .password-content {
+      margin: 24px 0 0;
+      &__box {
+        width: 100%;
+        height: 48px;
+        margin: 8px 0 0;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid $color-form-border;
+        background: $color-form;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+      &__info {
+        margin: 8px 0 0;
+        line-height: 1.5;
+        color: $color-text;
+        font-size: 14px;
+      }
+      &__check {
+        margin: 16px 0 0;
+        display: flex;
+        flex-direction: row;
+        .checkbox {
+          width: 20px;
+          height: 20px;
+          border-radius: 2px;;
         }
-          &__name-kana {
-            height: 40px;
-            width: 50%;
-            margin: auto;
-            padding-top: 20px;
-            &__label {
-              font-weight: 550;
-              display: inline-block;
-            }
-            &__require {
-              background: #ea352d;
-              display: inline-block;
-              margin: 0 0 0 8px;
-              padding: 2px 4px;
-              border-radius: 2px;
-              color: #fff;
-              font-size: 12px;
-              vertical-align: top;
-            }
-          &__box {
-            text-align: center;
-          }
-            &__family-name {
-              height: 50px;
-              width: 140px;
-              margin: 8px 0 0;
-              padding: 10px 16px 8px;
-              border-radius: 4px;
-              border: 1px solid #ccc;
-              background: #fff;
-              line-height: 1.5;
-              font-size: 16px;
-            }
-            &__first-name {
-              height: 50px;
-              width: 140px;
-              margin: 8px 0 0;
-              padding: 10px 16px 8px;
-              border-radius: 4px;
-              border: 1px solid #ccc;
-              background: #fff;
-              line-height: 1.5;
-              font-size: 16px;
-            }
-          }
-          &__birthday {
-            width: 50%;
-            margin: auto;
-            padding-top: 20px ;
-            &__label {
-              font-weight: 550;
-              display: inline-block;
-            }
-            &__require {
-              background: #ea352d;
-              display: inline-block;
-              margin: 0 0 0 8px;
-              padding: 2px 4px;
-              border-radius: 2px;
-              color: #fff;
-              font-size: 12px;
-              vertical-align: top;
-            }
-            &__select-wrap {
-              position: relative;
-              width:300px;
-              .fa-chevron-down{
-                position: absolute;
-                top: 25px;
-                left: 50px;
-              }
-              #user_birth_year {
-                display: inline-block;
-                height: 50px;
-                width: 70px;
-                margin: 8px 3px 3px;
-                padding: 0px 5px;
-                border-radius: 4px;
-                border: 1px solid #ccc;
-                background: #fff;
-                line-height: 1.5;
-                font-size: 16px;
-              }
-              #user_birth_month {
-                display: inline-block;
-                height: 50px;
-                width: 70px;
-                margin: 8px 3px 3px;
-                padding: 0px 10px;
-                border-radius: 4px;
-                border: 1px solid #ccc;
-                background: #fff;
-                line-height: 1.5;
-                font-size: 16px;
-              }
-              #user_birth_day {
-                display: inline-block;
-                height: 50px;
-                width: 70px;
-                margin: 8px 3px 3px;
-                padding: 0px 10px;
-                border-radius: 4px;
-                border: 1px solid #ccc;
-                background: #fff;
-                line-height: 1.5;
-                font-size: 16px;
-              }
-            }
-            &__text {
-              color: #888;
-              font-size: 15px;
-              margin-top: 10px;
-            }
-          }
-          &__info {
-            height: 25%;
-            width: 50%;
-            margin: auto;
-            &__text {
-              font-size: 14.5px;
-              margin-top: 30px;
-              a{
-                color: #0099e8;
-                text-decoration: none;
-              }
-            }
-            &__btn {
-              &__red{
-                background: #ea352d;
-                display: block;
-                height: 48px;
-                width :100%;
-                margin:30px auto 20px;
-                font-size:14px;
-                color:#fff;
-                text-decoration: none;
-                text-align: center;
-                line-height: 3.3;
-              }
-            }
-              .icon{
-                color:#0099e8 ;
-                font-size: 20px;
-              }
-            }
-            &__label {
-              background-color: rgb(245, 245, 245);
-              color: #888888;
-              font-size: 12px;
-              display: block;
-              height: 50px;
-              width :100%;
-              margin: auto;
-              padding: 10px;
-              &__policy {
-                display: inline;
-                color: #0099e8;
-                text-decoration: none;
-              }
-              &__service {
-                display: inline;
-                color: #0099e8;
-                text-decoration: none;
-              }
-            }
-          }
+        .checkbox-label {
+          margin-left: 8px;
+          font-size: 14px;
+          font-weight: 400;
         }
       }
     }
+    .identification {
+      margin-top: 32px;
+      &__box {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &__explanation {
+        margin: 8px 0 0;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    .name-kanji-content {
+      margin: 24px 0 0;
+      &__box {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: row;
+        .last_name {
+          margin-right: 7px;
+          width: 168px;
+          height: 48px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid $color-form-border;
+          background: $color-form;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+        .first_name {
+          width: 168px;
+          height: 48px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid $color-form-border;
+          background: $color-form;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+      }
+    }
+    .name-kana-content {
+      margin: 24px 0 0;
+      margin: 24px 0 0;
+      &__box {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: row;
+        .last_name_kana {
+          margin-right: 7px;
+          width: 168px;
+          height: 48px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid $color-form-border;
+          background: $color-form;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+        .first_name_kana {
+          width: 168px;
+          height: 48px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid $color-form-border;
+          background: $color-form;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+      }
+    }
+    .birthday-content {
+      margin: 24px 0 0;
+      &__box {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: row;
+        select {
+          height: 48px;
+          width: 85px;
+          padding: 0 10px;
+          border-radius: 4px;
+          border: 1px solid $color-form-border;
+          background: $color-form;
+          line-height: 1.5;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        span {
+          margin: 0 4px;
+          height: 48px;
+          line-height: 48px;
+        }
+      }
+    }
+    .note-text {
+      margin: 8px 0 0;
+      line-height: 1.5;
+      color: $color-text;
+      font-size: 14px;
+    }
+    .signup-register-btn {
+      margin-top: 32px;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      text-align: center;
+      border-radius: 4px;
+      background: $color-required;
+      border: 1px solid $color-required;
+      color: $color-form;
+      cursor: pointer;
+    }
   }
+  .signup-input-name {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    label {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.4em;
+      white-space: nowrap;
+    }
+    span {
+      margin-left: 8px;
+      font-size: 12px;
+      padding: 0 4px;
+      background-color: $color-required;
+      color: $color-form;
+      border-radius: 2px;
+      display: inline-block;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.4em;
+      white-space: nowrap;
+    }
+  }
+}

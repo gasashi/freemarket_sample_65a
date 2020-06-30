@@ -17,5 +17,5 @@
           = link_to "マイページ", "/users/mypage", class: "top-header__menu__right__btn"
           = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "top-header__menu__right__btn"
         - else
-          = link_to "ログイン", new_user_session_path, class: "top-header__menu__right__btn"
           = link_to "新規会員登録", "/signup/first", class: "top-header__menu__right__btn"
+          = link_to "ログイン", new_user_session_path, class: "top-header__menu__right__btn"

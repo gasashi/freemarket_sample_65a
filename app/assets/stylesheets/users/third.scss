@@ -1,89 +1,69 @@
 .body-phone1 {
-  .field_with_errors {
-    display: contents;
+  width: 700px;
+  margin: 0 auto;
+  background-color: $color-form;
+  .phone-number-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    border-bottom: 1px solid $color-background;
+    padding: 32px;
   }
-  .main {
-    background-color: rgb(245, 245, 245);
-    height: 60%;
-    &__container {
-      background-color: white;
-      height: 100%;
-      width: 50%;
-      margin: auto;
-      &__header {
-        background-color: white;
-        height: 100px;
-        font-size: 22px;
-        font-weight: bold;
-        margin: auto;
-        text-align: center;
-        line-height: 100px;
-        border-bottom: #f5f5f5 solid 1px;
+  .phone-number-form {
+    text-align: left;
+    padding: 40px 178.5px 64px;
+    .phone-number-content {
+      &__label {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.4em;
+        white-space: nowrap;
       }
-      &__form {
-        height: 100%;
+      &__number-input {
         width: 100%;
-        margin: auto;
-        &__input {
-          width: 340px;
-          font-weight: 550;
-          margin: auto;
-          &__title {
-            font-weight: 550;
-            margin-top: 20px;
-          }
-          &__text {
-            height: 25px;
-            width: 300px;
-            margin: 8px auto 0;
-            padding: 10px 16px 8px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background: #fff;
-            line-height: 1.5;
-            font-size: 16px;
-          }
-        }
-        &__info {
-          font-size: 12px;
-          display: block;
-          height: 32px;
-          width :340px;
-          margin: auto;
-          padding: 10px;
-        }
-        &__btn {
-          &__red {
-            background: #ea352d;
-            display: block;
-            height: 48px;
-            width :335px;
-            margin:30px auto 5px;
-            font-size:14px;
-            color:#fff;
-            text-decoration: none;
-            text-align: center;
-            line-height: 3.3;
-          }
-        }
-        &__label {
-          height: 50px;
-          width: 335px;
-          margin: auto;
-          font-size: 14px;
-        }
-        &__text {
-          height: 50px;
-          width: 335px;
-          margin: 20px auto 0;
-          font-size: 14px;
-          text-align: right;
-          &__right {
-            display: inline;
-            color: #0099e8;
-            text-decoration: none;
-          }
-        }
+        height: 48px;
+        margin: 8px 0 0;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid $color-form-border;
+        background: $color-form;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+    }
+    .phone-number-info {
+      margin: 8px 0 0;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .phone-number-label {
+      margin: 8px 0 0;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .phone-number-btn{
+      margin-top: 32px;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      text-align: center;
+      border-radius: 4px;
+      background: $color-required;
+      border: 1px solid $color-required;
+      color: $color-form;
+      cursor: pointer;
+    }
+    .phone-number-text {
+      margin-top: 32px;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: right;
+      &__right {
+        text-decoration: none;
+        color: #0099e8;
+      }
+      .fa-angle-right {
+        color: #0099e8;
       }
     }
   }
