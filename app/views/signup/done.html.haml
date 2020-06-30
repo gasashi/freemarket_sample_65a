@@ -1,18 +1,14 @@
+.body-register3-header
+  = render 'signup/progress/header4'
+
 .body-register3
-  .header
-    = render 'signup/progress/header4'
-  .main
-    .main__container
-      .main__container__header
-        会員登録完了
-      .main__container__form
-        .main__container__form__input
-          .main__container__form__input__label
-            ありがとうございます。
-          .main__container__form__input__require
-            会員登録が完了しました。
-          .main__container__form__btn
-          = link_to root_path, class: "main__container__form__btn__red" do
-            フリマをはじめる
-  .footer
-    = render 'products/login-footer'
+  .complete__header
+    会員登録完了
+  .body-register3-form
+    .body-register3-form__box1
+      ありがとうございます。
+    .body-register3-form__box2
+      会員登録が完了しました。
+    %button{:onclick => "location.href='/users/mypage'"} フリマをはじめる
+.body-register3-footer
+  = render 'products/login-footer'

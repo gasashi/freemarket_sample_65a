@@ -13,7 +13,7 @@
         %span
           必須
       = f.text_field :nickname, placeholder:"例)フリマ太郎", class: "nickname-content__box"
-
+      = @user.errors.full_messages_for(:nickname).first
     .mail-content
       .signup-input-name
         %label
@@ -21,7 +21,7 @@
         %span
           必須
       = f.email_field :email, placeholder:"PC・携帯どちらでも可", class: "mail-content__box"
-
+      = @user.errors.full_messages_for(:email).first
     .password-content
       .signup-input-name
         %label
@@ -29,6 +29,7 @@
         %span
           必須
       = f.password_field :password, placeholder:"7文字以上の半角英数字", class: "password-content__box" ,id: "PWForm"
+      = @user.errors.full_messages_for(:password).first
       .password-content__info
         ※英字と数字の両方を含めて設定してください
       .password-content__check
@@ -50,7 +51,8 @@
       .name-kanji-content__box
         = f.text_field :last_name, placeholder:"例)田中", class: "last_name"
         = f.text_field :first_name, placeholder:"例)太郎", class: "first_name"
-
+      = @user.errors.full_messages_for(:last_name).first
+      = @user.errors.full_messages_for(:first_name).first
     .name-kana-content
       .signup-input-name
         %label
@@ -60,6 +62,8 @@
       .name-kana-content__box
         = f.text_field :last_name_kana, placeholder:"例)タナカ", class: "last_name_kana"
         = f.text_field :first_name_kana, placeholder:"例)タロウ", class: "first_name_kana"
+      = @user.errors.full_messages_for(:last_name_kana).first
+      = @user.errors.full_messages_for(:first_name_kana).first
 
     .birthday-content
       .signup-input-name

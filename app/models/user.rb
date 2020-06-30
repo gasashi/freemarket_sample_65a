@@ -16,32 +16,32 @@ class User < ApplicationRecord
 
   # ユーザー情報
   validates :nickname, presence: true, length: {maximum: 20}, on: :validates_step1
-  validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX, message: 'は有効でありません。' }, on: :validates_step1
+  validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX, message: 'は有効でありません' }, on: :validates_step1
   validates :password, presence: true, length: {minimum: 7, maximum: 30}, format: { with: VALID_PASSWORD_REGEX, message: 'は30文字以下に設定して下さい'}, on: :validates_step1
   validates :birth_year, presence: true, on: :validates_step1
   validates :birth_month, presence: true, on: :validates_step1
   validates :birth_day, presence: true, on: :validates_step1
-  validates :last_name, presence: true, length: {maximum: 20}, format: { with: VALID_kanji, message: 'は有効でありません。' }, on: :validates_step1
-  validates :first_name, presence: true, length: {maximum: 20}, format: { with: VALID_kanji, message: 'は有効でありません。' }, on: :validates_step1
-  validates :last_name_kana, presence: true, length: {maximum: 20}, format: { with: VALID_KATAKANA_REGEX, message: 'はカタカナで入力して下さい。'}, on: :validates_step1
-  validates :first_name_kana, presence: true, length: {maximum: 20}, format: { with: VALID_KATAKANA_REGEX, message: 'はカタカナで入力して下さい。'}, on: :validates_step1
+  validates :last_name, presence: true, length: {maximum: 20}, format: { with: VALID_kanji, message: 'は有効でありません' }, on: :validates_step1
+  validates :first_name, presence: true, length: {maximum: 20}, format: { with: VALID_kanji, message: 'は有効でありません' }, on: :validates_step1
+  validates :last_name_kana, presence: true, length: {maximum: 20}, format: { with: VALID_KATAKANA_REGEX, message: 'はカタカナで入力して下さい'}, on: :validates_step1
+  validates :first_name_kana, presence: true, length: {maximum: 20}, format: { with: VALID_KATAKANA_REGEX, message: 'はカタカナで入力して下さい'}, on: :validates_step1
 
   # 電話番号入力情報
-  validates :phone_number, null: false, format: { with: VALID_PHONE_REGEX, message: 'は有効でありません。'}, on: :validates_step2
+  validates :phone_number, null: false, format: { with: VALID_PHONE_REGEX, message: 'は有効でありません'}, on: :validates_step2
 
   
 
   # アドレス情報
-  validates :first_name, presence: true, on: :validates_step3, format: { with: VALID_kanji, message: 'は有効でありません。' }, on: :validates_step3
-  validates :last_name, presence: true, on: :validates_step3, format: { with: VALID_kanji, message: 'は有効でありません。' }, on: :validates_step3
-  validates :first_name_kana, presence: true, format: { with: VALID_KATAKANA_REGEX, message: 'はカタカナで入力して下さい。'}, on: :validates_step3
-  validates :last_name_kana, presence: true, format: { with: VALID_KATAKANA_REGEX, message: 'はカタカナで入力して下さい。'}, on: :validates_step3
+  validates :first_name, presence: true, on: :validates_step3, format: { with: VALID_kanji, message: 'は有効でありません' }, on: :validates_step3
+  validates :last_name, presence: true, on: :validates_step3, format: { with: VALID_kanji, message: 'は有効でありません' }, on: :validates_step3
+  validates :first_name_kana, presence: true, format: { with: VALID_KATAKANA_REGEX, message: 'はカタカナで入力して下さい'}, on: :validates_step3
+  validates :last_name_kana, presence: true, format: { with: VALID_KATAKANA_REGEX, message: 'はカタカナで入力して下さい'}, on: :validates_step3
   validates :post_number, presence: true, on: :validates_step3
   validates :prefecture_id, presence: true, on: :validates_sttep3
   validates :city, presence: true, on: :validates_step3
   validates :address_number, presence: true, on: :validates_step3
   validates :building, presence: true, on: :validates_step3
-  validates :phone_number, presence: true, format: { with: VALID_PHONE_REGEX, message: 'は有効でありません。'}, allow_blank: true, on: :validates_step3
+  validates :phone_number, presence: true, format: { with: VALID_PHONE_REGEX, message: 'は有効でありません'}, allow_blank: true, on: :validates_step3
   
 
   protected
